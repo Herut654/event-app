@@ -41,7 +41,7 @@ function Welcome() {
     <>
       <section className='heading'>
         <h1>שלום {user && user.name}</h1>
-        <p>בראש ובראשונה צוות eventRacking מאחלים לכם המון מזל טוב ומקווים שהאתר יקל עליכן בארגון האירוע שלכם. האתר יוכל לספק לכם רשימה של ספקים מומלצים ,בין אם זה מקום לאיורע ,קייטרינג, אטרקציות, צלמים, תלבושות וכו..</p>
+        <p>בראש ובראשונה צוות eventRacking מאחלים לכם המון מזל טוב ומקווים שהאתר יקל עליכן בארגון האירוע שלכם. האתר יוכל לספק לכם רשימה של ספקים מומלצים ,בין אם זה מקום לאירוע ,קייטרינג, אטרקציות, צלמים, תלבושות וכו..</p>
       </section>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className={classes.gridContainer}>
         {eventsType.map((eventData, index) => {

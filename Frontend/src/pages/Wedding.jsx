@@ -22,11 +22,13 @@ function Wedding() {
   const { suggestions } = useSelector(
     (state) => state.suggestions
   )
- console.log('suppliers', JSON.stringify(suppliers))
-  var removeValFrom = [6,7,8];
+ console.log('suggestions', suggestions)
+  var removeValFrom = [0,1,2];
   let filterSuppliers = suppliers.filter(function (value, index) {
+    
     return removeValFrom.indexOf(index) === -1;
   })
+  console.log("filterSuppliers", filterSuppliers)
 
   useEffect(() => {
     if (isError) {

@@ -48,7 +48,7 @@ console.log('suggestions', suggestions)
               <Card sx={{ maxWidth: 345 }} >
                 <CardMedia
                   sx={{ height: 140 }}
-                  image={eventData.image}
+                  image={"./images/" + eventData.image}
                   title={eventData.name}
                 />
                 <CardContent>

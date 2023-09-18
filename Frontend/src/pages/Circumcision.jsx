@@ -23,10 +23,12 @@ function Circumcision() {
     (state) => state.suggestions
   )
   
-  var removeValFrom = [2,3,5,7];
+  var removeValFrom = [1,3,5,6];
   let filterSuppliers = suppliers.filter(function (value, index) {
+    console.log("value", value.name)
     return removeValFrom.indexOf(index) === -1;
   })
+  console.log("filterSuppliers", filterSuppliers)
 
   useEffect(() => {
     if (isError) {
@@ -52,7 +54,7 @@ function Circumcision() {
   return (
     <>
       <section className='heading'>
-        <p>לפי המידע שקיבלנו, אתם חוגגים אירוע מסוג "חתונה". להלן רשימה של ספקים לפי קטגוריות לאירוע שלך:</p>
+        <p>לפי המידע שקיבלנו, אתם חוגגים אירוע מסוג "ברית". להלן רשימה של ספקים לפי קטגוריות לאירוע שלך:</p>
       </section>
       <button className='btn' onClick={handleOpen}>צור אירוע</button>
       {open === true ? <PopUp open={open} suggestions={suggestions} handleClose={handleClose} eventName="ברית" /> : <></>}
