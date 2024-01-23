@@ -76,12 +76,12 @@ console.log('data', data)
                                 return (
                                     <div key={index}>
                                         {Math.abs(activeStep - index) <= 2 ? (
-                                            <Card sx={{ backgroundColor: "#e8eaf6", textAlign: "center" }} >
+                                            <Card sx={{ backgroundColor: "#bebed7", textAlign: "center" }} >
                                                 <CardContent>
-                                                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>סוג אירוע: {eventData.eventValue}</Typography>
-                                                    <Typography sx={{ mb: 1.5 }} color="text.secondary"> תאריך: {eventData.dateValue}</Typography>
+                                                    <Typography sx={{ fontSize: 14 }} color=" #080808" gutterBottom>סוג אירוע: {eventData.eventValue}</Typography>
+                                                    <Typography sx={{ mb: 1.5 }} color=" #080808"> תאריך: {eventData.dateValue}</Typography>
                                                     <Typography variant="body1">שם החוגג: {eventData.nameValue}</Typography>
-                                                    {eventData.ulamValue ? <Typography variant="body1">אולם אירועים: {eventData.ulamValue}</Typography> : <></>}
+                                                    {eventData.ulamValue ? <Typography variant="body1"> אולם אירועים:{eventData.ulamValue}</Typography> : <></>}
                                                     {eventData.foodValue ? <Typography variant="body1">קייטרינג: {eventData.foodValue}</Typography> : <></>}
                                                     {eventData.photographerValue ? <Typography variant="body1">צלם: {eventData.photographerValue}</Typography> : <></>}
                                                     {eventData.attractionValue ? <Typography variant="body1">אטרקציות ודיג'יי: {eventData.attractionValue}</Typography> : <></>}

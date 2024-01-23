@@ -56,8 +56,8 @@ function Wedding() {
       <section className='heading'>
         <p>לפי המידע שקיבלנו, אתם חוגגים אירוע מסוג "חתונה". להלן רשימה של ספקים לפי קטגוריות לאירוע שלך:</p>
       </section>
-      <section className='heading'>
-      <button className='btn' onClick={handleOpen}>צור אירוע</button>
+      <section >
+      <button className='btn' margin-bottom='20px'  onClick={handleOpen} >צור אירוע</button>
       {open === true ? <PopUp open={open} suggestions={suggestions} handleClose={handleClose} eventName="חתונה" /> : <></>}
       </section>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className={classes.gridContainer}>
@@ -74,7 +74,7 @@ function Wedding() {
                   <Typography gutterBottom variant="h5" component="div">
                     {eventData.name}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="#080808">
                     {eventData.description}
                   </Typography>
                 </CardContent>

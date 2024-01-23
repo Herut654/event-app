@@ -29,6 +29,7 @@ const style = () => ({
       p: 4,
       border: 'none',
     }
+    
   });
   
   export default style

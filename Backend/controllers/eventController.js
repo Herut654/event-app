@@ -22,6 +22,7 @@ const setEvent = asyncHandler(async (req, res) => {
   const event = await Event.create({
     foodValue: req.body.foodValue,
     ulamValue: req.body.ulamValue,
+    ulamLink: req.body.ulamLink,
     attractionValue: req.body.attractionValue,
     clouthValue: req.body.clouthValue,
     photographerValue: req.body.photographerValue,

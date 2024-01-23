@@ -4,6 +4,7 @@ const API_URL = '/api/events/'
 
 // Create new event
 const createEvent = async (eventData, token) => {
+  console.log("eventData", eventData)
   const config = {
     headers: {
       Authorization: `Bearer ${token}`,

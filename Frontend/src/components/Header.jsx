@@ -1,7 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
+// import Search from '../components/Search'
 import Logo from '../assets/images/logo.png'
+import Search from '../components/Search';
+
 
 function Header() {
   const navigate = useNavigate()
@@ -31,16 +34,21 @@ function Header() {
   const goWelcome = () => {
     navigate('/welcome')
   }
+  
 
   return (
     <header className='header'>
       
       <div className='logo'>
-        <img src={Logo} width={80} height={50} alt="logo" onClick={goHome}/>
+        <img src={Logo} width={120} height={60} alt="logo" onClick={goHome}/>
+
       </div>
       <ul>
         {user ? (
           <ul>
+            <li>
+             <Search/>
+             </li>
            <li>
             {welcome || home || circumcision || barMitzva || birthday || wedding ? <button className='btn' onClick={goProfile}> פרופיל </button> : <></>}
          </li>
@@ -57,14 +65,19 @@ function Header() {
           <>
             {home ?
               <>
+              
                 <li>
                   <Link to='/login'>
+                  <button className='btn'>
                     התחברות
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to='/register'>
+                  <button className='btn'>
                     הרשמה
+                    </button>
                   </Link>
                 </li>
               </>
@@ -73,7 +86,9 @@ function Header() {
                 {register ?
                   <li>
                     <Link to='/login'>
+                    <button className='btn'>
                       התחברות
+                      </button>
                     </Link>
                   </li>
                   :
@@ -82,7 +97,9 @@ function Header() {
                 {login ?
                   <li>
                     <Link to='/register'>
+                    <button className='btn'>
                       הרשמה
+                      </button>
                     </Link>
                   </li>
                   :
@@ -93,6 +110,7 @@ function Header() {
           </>
         )}
       </ul>
+
     </header>
   )
 }

@@ -11,6 +11,10 @@ const eventSchema = mongoose.Schema(
       type: String,
       required: [false, 'Please add a text value'],
     },
+    ulamLink: {
+      type: String,
+      required: [false, 'Please add a text value'],
+    },
     foodValue: {
       type: String,
       required: [false, 'Please add a text value'],

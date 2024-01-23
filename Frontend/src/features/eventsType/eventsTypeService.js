@@ -13,8 +13,9 @@ const API_URL = '/api/eventsType/'
         Authorization: `Bearer ${token}`,
       },
     }
+  
   const response = await axios.get(API_URL, config)
- 
+ //alert('--------------------------After-----------')
   // const response = [
   //   { name: "חתונה", image: Wedding, description: "hello", link: "wedding" },
   //   { name: "בר מצווה", image: BarMitzva, description: "hello", link: "barMitzva" },
@@ -23,6 +24,7 @@ const API_URL = '/api/eventsType/'
   // ]
   return response.data
 }
+
 
 const eventsTypeService = {
   getEventsType,

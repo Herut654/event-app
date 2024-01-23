@@ -14,6 +14,7 @@ const PopUp = ({ open, id, suggestions, handleClose, eventName }) => {
 
   const [filterSuppliers, setFilterSuppliers] = useState([]);
   const [ulamValue, setUlamValue] = useState('');
+  const [ulamLink, setUlamLink] = useState('');
   const [foodValue, setFoodValue] = useState('');
   const [attractionValue, setAttractionValue] = useState('');
   const [clouthValue, setClouthValue] = useState('');
@@ -77,12 +78,14 @@ const PopUp = ({ open, id, suggestions, handleClose, eventName }) => {
 
 
   }, [dispatch])
+  console.log("ulamLink", ulamLink)
 
   const onSubmit = (e) => {
     e.preventDefault()
 
     const userData = {
       ulamValue,
+      ulamLink,
       foodValue,
       attractionValue,
       clouthValue,
@@ -108,6 +111,8 @@ const PopUp = ({ open, id, suggestions, handleClose, eventName }) => {
       navigate('/profile')
     }
   }
+
+
 
   return (
     <>
@@ -137,7 +142,7 @@ const PopUp = ({ open, id, suggestions, handleClose, eventName }) => {
               InputLabelProps={{
                 shrink: true,
               }}
-             
+
               onChange={(e) => {
                 setDateValue(e.target.value);
               }}
@@ -159,6 +164,19 @@ const PopUp = ({ open, id, suggestions, handleClose, eventName }) => {
               inputValue={ulamValue}
               onInputChange={(event, newInputValue) => {
                 setUlamValue(newInputValue);
+                if (newInputValue == "חצר המלכה") {
+                  setUlamLink("https://qce.co.il/")
+                } else if (newInputValue == "הרמוניה בגן") {
+                  setUlamLink("https://www.harmoniabagan.co.il/")
+                } else if (newInputValue =="ונישן") {
+                  setUlamLink("https://www.venetian-israel.co.il/")
+                } else if (newInputValue == "טרויה") {
+                  setUlamLink("https://www.troya-garden.co.il/")
+                } else {
+
+                }
+
+
               }}
               fullWidth
               options={suggestions.ulam.map((option) => option.name)}

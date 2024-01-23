@@ -12,6 +12,8 @@ import BarMitzva from './pages/BarMitzva'
 import Wedding from './pages/Wedding'
 import Suggestion from './pages/Suggestion'
 import Profile from './pages/Profile'
+import Footer from './components/Footer'
+
 
 function App() {
   
@@ -44,6 +46,8 @@ function App() {
         </div>
       </Router>
       <ToastContainer />
+      <Footer/>
+
     </>
   )
 }

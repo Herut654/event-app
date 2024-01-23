@@ -39,7 +39,7 @@ console.log('suggestions', suggestions)
   return (
     <>
       <section className='heading'>
-        <p>רשימת המלצות</p>
+        <p>לפניך מספר ספקים מומלצים לאירוע עבורך :</p>
       </section>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className={classes.gridContainer}>
         {suggestions.map((eventData, index) => {

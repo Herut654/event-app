@@ -48,10 +48,10 @@ const RecommendSlider = ({ data }) => {
                                 return (
                                     <div key={index}>
                                         {Math.abs(activeStep - index) <= 2 ? (
-                                            <Card sx={{ backgroundColor: "#e8eaf6", textAlign: "center" }}>
+                                            <Card sx={{ backgroundColor: " #b5b5cc;", textAlign: "center" }}>
                                                 <CardContent>
                                                     <span>{eventData.name}</span> <PersonIcon />
-                                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">{moment(eventData.createdAt).format('YYYY-MM-DD')} :תאריך</Typography>
+                                                    <Typography sx={{ mb: 1.5 }} color=" #080808">{moment(eventData.createdAt).format('YYYY-MM-DD')} :תאריך</Typography>
                                                     <Typography variant="body1">{eventData.text}</Typography>
                                                 </CardContent>
                                                 {user ?

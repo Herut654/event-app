@@ -57,7 +57,7 @@ function Welcome() {
                 <Typography gutterBottom variant="h5" component="div">
                   {eventData.name}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="#080808">
                   {eventData.description}
                 </Typography>
               </CardContent>
